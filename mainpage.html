@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Home page</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="https://kit.fontawesome.com/59b913f09a.js" crossorigin="anonymous"></script> 
+  <!--Icon and JS for burger menu in mobile-->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<meta name="viewport" content="width=device-width" />
+</head>
+
+<body>
+	<div class="container">
+<!--Navigation section-->
+		<nav class="main-nav">
+      <a href="mainpage.html">
+			<img class="logo" src="logo.png" alt="logo">
+      </a>
+			<a href="#" class="menu-switch small-only">
+				<i class="fas fa-bars"></i>
+			</a>
+
+			<ul class="menu">
+				<li><a href="contacts.html">CONTACTS</a></li>
+				<li><a href="about.html">ABOUT US</a></li>
+				<li><a href="shop.html">SHOP</a></li>
+				<li><a href="aquapaw.html">AQUAPAW</a></li>
+			</ul>
+		</nav>
+<!--content-->
+<!--image and text about-->
+		<img class="bottlesimg" src="2.png" alt="Products">
+		<h1>For the love of dogs</h1>
+		<p class="homedescrioption">In most places, tap water contains a combination of chlorine, fluoride, dissolved
+			pharmaceuticals and other harmful chemicals for your dog. We made Aquapaw, the purest water possible, for dog’s
+			sake. Aquapaw also flushes out waste products from the dogs body, and provides some Vitamins for them.</p>
+		<a href="shop.html" class="button">Order Now</a> <!-- take you to shop-->
+
+<!--reviews of product-->
+		<div class="reviews">
+			<div class="box1">
+				<p>"Bobby is even more playful with Aquapaw vitamin water!"
+				</p>
+				<img src="1.png" alt="Jann" class="avatar">
+				<div class="name">Mario, Bobbys owner</div>
+			</div>
+
+			<div class="box1">
+				<p>"Thanks to Aquapaw, Roxy's fur has become shinier than ever.""
+				</p>
+				<img class="avatar" src="3.png" alt="Julie">
+				<div class="name">Anne, Roxys owner</div>
+			</div>
+		</div>
+		<a href="about.html" class="button">Discover more</a> <!--take you to Aquapaw-->
+
+		<br /><br /><br />
+
+	</div>
+<!--burger menu animation from lines to cross-->
+	<script>
+		$(function(){
+			$('.menu-switch').on('click', function(){
+				$(this).find('.fas').toggleClass('fa-times');
+				$('.menu').toggleClass('opened');
+			});
+		});
+	</script>
+</body>
+</html>
