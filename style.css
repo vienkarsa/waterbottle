@@ -3,12 +3,14 @@
 * {
 	box-sizing: border-box;
 }
+
 /* design for whole page*/
 html, body {
 	margin: 0;
 	padding: 0;
-  background-color: #202833;
+	background-color: #202833;
 	font-family: 'Nirmala UI', sans-serif;
+	color: #FFFFFF;
 }
 
 .small-only {
@@ -24,6 +26,7 @@ html, body {
 	max-width: 200px;
 	margin: 35px 0 0 35px;
 }
+
 /* nav li menu elements are for menu*/
 nav {
 	list-style-type: none;
@@ -42,6 +45,10 @@ nav {
 	margin: 35px;
 }
 
+h3 {
+	color: #fff;
+}
+
 li a, .dd, .home {
 	display: inline-block;
 	color: #FFFEFE;
@@ -50,19 +57,17 @@ li a, .dd, .home {
 	text-decoration: none;
 }
 
+
+li a.active {
+	border-bottom: 1px solid #fff;
+}
+
 .bottlesimg {
 	margin: 0px 50px 50px 0;
 	float: left;
 	max-width: 50%;
 }
 
-h1 {
-	color: #FFFFFF;
-}
-
-p {
-	color: #FFFFFF;
-}
 
 .homedescrioption {
 	margin-right: 35px;
@@ -79,6 +84,7 @@ p {
 	text-decoration: none;
 	font-size: 28px;
 }
+
 /* reviews part, devided in 2 boxes*/
 .box1 {
 	width: 50%;
@@ -101,7 +107,7 @@ p {
 	margin-left: 20px;
 	font-size: 18px;
 	margin-top: 10px;
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 	font-weight: bold;
 }
 
@@ -111,23 +117,98 @@ p {
 }
 
 .textinbox {
-  width: 500px;
-  
+	width: 500px;
+
 }
-.dog{
-  max-width: 400px;
-  float:right;
+
+.dog {
+	max-width: 400px;
+	float: left;
+	display: block;
+	margin-bottom: 100px;
 }
 
 .poster {
-  max-width: 30%;
-  float:right;
+	max-width: 600px;
+	float: left;
+	display: block;
+	margin-bottom: 100px;
 }
+
+.aboutUsDescription {
+	float: left;
+	display: block;
+	width: 300px;
+	margin-right: 20px;
+	text-align: justify;
+}
+
+
+.col-6 {
+	float: left;
+	width: 50%;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: repeat(3,minmax(40px,auto));
+
+	grid-gap: 10px;
+}
+
+.grid-item {
+	border: 1px dashed #ccc;
+	padding: 15px;
+}
+
+.grid-item .button {
+	float: right;
+	font-size: 20px;
+	padding: 10px 32px;
+	margin: 0;
+}
+.grid-item h3 {
+	float: left;
+	border-bottom: 5px double #fff;
+}
+.grid-item .text-center {
+	clear: both;
+	text-align: justify;
+}
+
 /*for mobile */
-@media (max-width: 768px){
+@media (max-width: 1239px) {
+	.grid-container {
+		display: block;
+	}
+	.grid-item {
+		margin-bottom: 15px;
+	}
+	.grid-item .button {
+		width: auto;
+	}
+	.col-6 {
+		float: none;
+		width: 100%;
+	}
+
+	.aboutUsDescription {
+		float: none;
+		display: block;
+		width: 100%;
+		margin-right: 0;
+		text-align: justify;
+	}
+
+	.dog, .poster {
+		width: 100%;
+	}
+
 	.container {
 		width: 95%;
 	}
+
 	.small-only {
 		display: block;
 	}
@@ -135,7 +216,8 @@ p {
 	.menu {
 		display: none;
 	}
-/*for burger menu*/
+
+	/*for burger menu*/
 	.menu.opened {
 		display: block;
 		background: #0d131d;
@@ -150,10 +232,13 @@ p {
 	.menu.opened li {
 		float: none;
 	}
+
 	.menu.opened li a {
 		margin: 0;
 		color: #88D2D8;
+		border: none !important;
 	}
+
 	.menu-switch {
 		position: absolute;
 		right: 30px;
@@ -182,6 +267,7 @@ p {
 	.reviews {
 		overflow: hidden;
 	}
+
 	.box1 {
 		clear: both;
 		width: 100%;
@@ -192,6 +278,7 @@ p {
 	.box1 p {
 		margin-bottom: 10px;
 	}
+
 	.box1 .name {
 		float: left;
 		margin-left: 3px;
@@ -200,69 +287,60 @@ p {
 		font-weight: bold;
 	}
 
-  .map {
-    max-width: 100%;
-  }
-  
-  .textinbox {
-    max-width: 80%;
-  }
-  
-  
-  
-  
-  
-  
-  .wrapper > * {
-  grid-column: col-start / span 12;
-}
-
-@media (max-width: 5000px) {
-	
-	.cont {
-	grid-column: 6 / span 3;
-    grid-row:3 ;}
-	
-	.order{
-	grid-column: 6 / span 2;
-    grid-row: 4;
-		
+	.map {
+		max-width: 100%;
 	}
-	
-	.cont1 {
-	grid-column: col-start / span 3;
-    grid-row: 5;}
-	
-	.cont4 {
-	grid-column: 6 / span 3;
-    grid-row: 6;
+
+	.wrapper > * {
+		grid-column: col-start / span 12;
 	}
-	
-	.cont2 {
-	grid-column: col-start / span 3;
-    grid-row: 7;}
-	
-	.cont5 {
-	grid-column: 6 / span 3;
-    grid-row: 8;}
-	
-	.cont3 {
-	grid-column: col-start / span 3;
-    grid-row: 9;}
-	
-	
+
+/*
+	@media (max-width: 5000px) {
+
+		.cont {
+			grid-column: 6 / span 3;
+			grid-row: 3;
+		}
+
+		.order {
+			grid-column: 6 / span 2;
+			grid-row: 4;
+
+		}
+
+		.cont1 {
+			grid-column: col-start / span 3;
+			grid-row: 5;
+		}
+
+		.cont4 {
+			grid-column: 6 / span 3;
+			grid-row: 6;
+		}
+
+		.cont2 {
+			grid-column: col-start / span 3;
+			grid-row: 7;
+		}
+
+		.cont5 {
+			grid-column: 6 / span 3;
+			grid-row: 8;
+		}
+
+		.cont3 {
+			grid-column: col-start / span 3;
+			grid-row: 9;
+		}
+	}
+*/
 }
 
-  .poster {
-    max-width: 75%;
-    
-  }
+	.product1 {
+		max-width: 100%;
+		grid-column: 5 / span 4;
 
-
-.product1 {
-max-width: 100%;
-grid-column: 5 / span 4;
-
-}
+	}
 
 
