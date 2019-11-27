@@ -88,7 +88,7 @@ li a.active {
 /* reviews part, devided in 2 boxes*/
 .box1 {
 	width: 50%;
-	margin: 0;
+	margin-top: 30px;
 	padding-right: 35px;
 	float: left;
 }
@@ -103,7 +103,7 @@ li a.active {
 }
 
 .box1 .name {
-	float: left;
+
 	margin-left: 20px;
 	font-size: 18px;
 	margin-top: 10px;
@@ -139,7 +139,11 @@ li a.active {
 	float: left;
 	display: block;
 	width: 300px;
+<<<<<<< HEAD
+	margin-right: 80px;
+=======
 	margin-right: 20px;
+>>>>>>> 023454e5b3a0ba21c232811ebb528a458d097ab9
 	text-align: justify;
 }
 
@@ -171,11 +175,19 @@ li a.active {
 .grid-item h3 {
 	float: left;
 	border-bottom: 5px double #fff;
+<<<<<<< HEAD
 }
 .grid-item .text-center {
 	clear: both;
 	text-align: justify;
 }
+=======
+}
+.grid-item .text-center {
+	clear: both;
+	text-align: justify;
+}
+>>>>>>> 023454e5b3a0ba21c232811ebb528a458d097ab9
 
 /*for mobile */
 @media (max-width: 1239px) {
